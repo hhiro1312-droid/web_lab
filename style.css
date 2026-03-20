@@ -1,0 +1,164 @@
+﻿body {
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    color: #333;
+}
+
+p {
+    text-indent: 20px;
+}
+
+.title {
+    font-family: Tahoma, sans-serif;
+    text-align: center;
+    font-weight: 700;
+    letter-spacing: -2px;
+    text-decoration: line-through;
+    text-transform: uppercase;
+}
+
+.justify {
+    text-align: justify;
+    font-weight: 700;
+    font-style: italic;
+    text-transform: capitalize;
+}
+
+ul {
+    list-style-type: square;
+    list-style-position: outside;
+    color: #114eaf;
+}
+
+ol {
+    list-style-type: decimal-leading-zero;
+}
+/* === Стили для таблицы Вариант 4 === */
+table.variant-4 {
+    border-collapse: collapse; /* Убирает двойные границы */
+    border: 2px solid #333; /* Внешняя рамка таблицы */
+    margin-top: 20px;
+    width: auto; /* Автоматическая ширина */
+}
+
+    /* ЯВНО указываем границы для ВСЕХ ячеек */
+    table.variant-4 td {
+        border: 1px solid #000; /* ЧЕРНЫЕ границы толщиной 1px */
+        text-align: center; /* Текст по центру */
+        vertical-align: middle; /* По вертикали тоже по центру */
+        font-weight: normal;
+        padding: 5px; /* Добавим небольшой отступ внутри ячеек */
+    }
+
+        /* Задаем ширину столбцов */
+        table.variant-4 td.col1 {
+            width: 115px; /* 3 см */
+        }
+
+        /* Во 2-м столбце верхняя ячейка занимает 2 колонки */
+        table.variant-4 td.col2-top {
+            width: 190px; /* 5 см */
+        }
+
+        /* Нижние ячейки 2-го столбца */
+        table.variant-4 td.col2-bottom-left,
+        table.variant-4 td.col2-bottom-right {
+            width: 95px; /* 190px / 2 = по 2.5 см */
+        }
+
+        /* 3, 4, 5 столбцы */
+        table.variant-4 td.col3-top,
+        table.variant-4 td.col3-bottom,
+        table.variant-4 td.col4-top,
+        table.variant-4 td.col4-bottom,
+        table.variant-4 td.col5-top,
+        table.variant-4 td.col5-bottom {
+            width: 115px; /* 3 см */
+        }
+
+    /* Высота строк */
+    table.variant-4 tr:first-child td {
+        height: 75px; /* 2 см */
+    }
+
+    table.variant-4 tr:nth-child(2) td {
+        height: 38px; /* 1 см */
+    }
+
+    /* Если используете третий вариант с пустыми ячейками */
+    table.variant-4 tr:nth-child(3) td {
+        height: 38px; /* 1 см */
+        background-color: #f0f0f0;
+    }
+
+    /* Дополнительная страховка - границы у пустых ячеек ТОЖЕ будут */
+    table.variant-4 .empty-cell {
+        border: 1px solid #000; /* Явно указываем границы */
+    }
+/* === Стили для таблицы Вариант 9 === */
+.variant-9-final-ultra {
+    width: 45%;
+    margin: 20px 0;
+    border-collapse: collapse; /* Убирает пространство между ячейками */
+    table-layout: fixed;
+}
+
+    .variant-9-final-ultra td {
+        border: 1px solid #000;
+        text-align: center;
+        vertical-align: middle;
+        padding: 10px;
+        height: 40px;
+    }
+
+        /* Убираем границы для невидимых ячеек, чтобы укоротить 2.1 */
+        .variant-9-final-ultra td.no-border {
+            border: none;
+        }
+
+    /* Настройка высот для пропорций чертежа */
+    .variant-9-final-ultra tr:nth-child(1) {
+        height: 45px;
+    }
+
+    .variant-9-final-ultra tr:nth-child(2) {
+        height: 60px;
+    }
+    /* Увеличенная высота объединенной 2.2 */
+    .variant-9-final-ultra tr:nth-child(5) {
+        height: 45px;
+    }
+/* === Стили для таблицы Вариант 14 (УМЕНЬШЕННАЯ ВЫСОТА) === */
+.variant-14-precise {
+    width: 40%;
+    border-collapse: collapse;
+    table-layout: fixed; /* Это заставляет браузер строго следовать colspan */
+    margin-top: 20px;
+}
+
+    .variant-14-precise td {
+        border: 1px solid #000;
+        height: 40px;
+        text-align: center;
+        vertical-align: middle;
+    }
+
+    /* Настраиваем высоту для визуального сходства с фото */
+    .variant-14-precise tr:nth-child(1) td {
+        height: 35px;
+    }
+
+    .variant-14-precise tr:nth-child(2) td {
+        height: 35px;
+    }
+
+    .variant-14-precise tr:nth-child(3) td {
+        height: 70px;
+    }
+
+    .variant-14-precise tr:nth-child(4) td {
+        height: 40px;
+    }
+
+   

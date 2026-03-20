@@ -1,0 +1,120 @@
+﻿<!DOCTYPE html>
+
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Страница со стилями</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <h1 class="title">ПРИВЕТ МИР</h1>
+
+    <p>Давно выяснено, что при оценке дизайна и композиции читаемый текст <span style="text-decoration: line-through;">мешает сосредоточиться</span>.</p>
+
+    <p class="justify"><strong>Lorem Ipsum Используют Потому, Что Тот Обеспечивает Более Или Менее Стандартное <u>Заполнение Шаблона</u>, А Также Реальное Распределение Букв И Пробелов В Абзацах, Которое Не Получается При Простой Дубликации.</strong></p>
+    <h4>Список покупок:</h4>
+    <ul>
+        <li>Хлеб</li>
+        <li>Молоко</li>
+        <li>Картошка</li>
+    </ul>
+
+    <h4>Инструкция:</h4>
+    <ol>
+        <li>Вставить батарейки в пульт</li>
+        <li>Нажать кнопку ВКЛ</li>
+    </ol>
+
+    <dl>
+        <dt>Молоко</dt>
+        <dd>1 литр</dd>
+        <dt>Картошка</dt>
+        <dd>2кг</dd>
+    </dl>
+    <h4>Ссылки и медиа</h4>
+
+    <h4>График</h4>
+
+    <svg xmlns="http://www.w3.org/2000/svg" height="400" width="450" viewBox="0 0 450 400">
+        <!-- Точки A, B, C (кружки) -->
+        <circle cx="100" cy="350" r="5" fill="black" stroke="black" stroke-width="1" />
+        <circle cx="250" cy="50" r="5" fill="black" stroke="black" stroke-width="1" />
+        <circle cx="400" cy="350" r="5" fill="black" stroke="black" stroke-width="1" />
+
+        <!-- Прямая линия A-B (красная) -->
+        <path d="M100 350 L250 50" stroke="red" stroke-width="3" fill="none" />
+        <path d="M250 50 L400 350" stroke="red" stroke-width="3" fill="none" />
+
+        <!-- Парабола A-C (синяя) - квадратичная кривая Безье -->
+        <!-- Контрольная точка находится посередине по X и вверху по Y, чтобы создать параболу -->
+        <path d="M100 350 Q 250 50, 400 350" stroke="blue" stroke-width="5" fill="none" />
+
+        <!-- Горизонтальная зеленая линия от середины до середины -->
+        <path d="M175 200 L325 200" stroke="green" stroke-width="3" fill="none" />
+
+        <!-- Подписи точек -->
+        <text x="70" y="370" font-size="20" font-family="sans-serif">A</text>
+        <text x="260" y="30" font-size="20" font-family="sans-serif">B</text>
+        <text x="410" y="370" font-size="20" font-family="sans-serif">C</text>
+    </svg>
+    <h4>Мои SVG-фигуры</h4>
+    <svg width="600" height="400" xmlns="http://www.w3.org/2000/svg">
+
+        <!-- Круг с прозрачностью -->
+        <circle cx="100" cy="100" r="50" fill="rgba(255, 0, 0, 0.5)" stroke="black" stroke-width="3" />
+
+        <!-- Прямоугольник с закруглением и градиентом -->
+        <rect x="200" y="50" width="100" height="80" rx="15" ry="15"
+              fill="url(#grad1)" stroke="blue" stroke-width="2" />
+
+        <!-- Звезда (полигон) -->
+        <polygon points="100,250 120,300 180,300 130,340 150,400 100,370 50,400 70,340 20,300 80,300 100,250"
+                 fill="yellow" stroke="orange" stroke-width="2" fill-opacity="0.7" />
+
+        <!-- Текст -->
+        <text x="250" y="250" font-family="Arial" font-size="30" fill="green" stroke="darkgreen" stroke-width="0.5">Привет, SVG!</text>
+
+        <!-- Кривая (путь) -->
+        <path d="M50 300 Q 150 200, 250 300 T 450 300" stroke="purple" stroke-width="4" fill="none" />
+
+        <!-- Комбинация фигур с наложением (круг на квадрате) -->
+        <rect x="300" y="300" width="100" height="100" fill="lightblue" stroke="navy" />
+        <circle cx="350" cy="350" r="40" fill="rgba(255, 255, 255, 0.5)" stroke="red" stroke-width="3" />
+
+        <!-- Определение градиента (для прямоугольника) -->
+        <defs>
+            <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" style="stop-color:rgb(255,255,0);stop-opacity:1" />
+                <stop offset="100%" style="stop-color:rgb(255,0,0);stop-opacity:1" />
+            </linearGradient>
+        </defs>
+    </svg>
+    <h4>Видео и аудио</h4>
+
+    <h5>Видео с элементами управления и постером</h5>
+    <video width="400" controls poster="img/summer.jpeg">
+        <source src="media/my-video.mp4" type="video/mp4">
+        Ваш браузер не поддерживает тег video.
+    </video>
+
+    <h5>Аудио с автовоспроизведением</h5>
+    <audio controls autoplay loop>
+        <source src="media/my-audio.mp3" type="audio/mpeg">
+        Ваш браузер не поддерживает тег audio.
+    </audio>
+
+    <h5>Пример iframe (видео с YouTube)</h5>
+    <iframe width="420" height="315" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+    <!-- Ссылка на другую страницу -->
+    <p><a href="about.html">Перейти на страницу "О нас"</a></p>
+
+    <!-- Изображение -->
+    <p>Летнее фото:</p>
+    <img src="img/summer.jpeg" alt="Летний пейзаж" width="300">
+
+    <!-- Ссылка на скачивание файла -->
+    <p><a href="files/archive.zip" download>Скачать архив с файлами</a></p>
+</body>
+</html>
